@@ -7,24 +7,45 @@
   <Content type="html">
     <![CDATA[
     <html>
+    <style>
+      #messages {
+        padding: 20px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
     <body>
-    <p id="phrase">hey you!</p>
+      <p id="messages">
+      </p>
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
       <!-- Código de la aplicación -->
 
-<script>
-  gapi.hangout.onApiReady.add(function(eventObj){
-  if (eventObj.isApiReady) {
-    console.log('ready');
-  }
-document.getElementById("phrase").innerHTML = 'hahahaha!';
+      <script>
+        gapi.hangout.onApiReady.add(function(eventObj){
+          setTimeout(function(){
+            addMessage('timeout executed, preparing interval');
 
+            setInterval(function(){
+              var participants = gapi.hangout.getParticipants();
 
-  console.log(gapi.hangout.getParticipants());
-});
-</script>
-<body>
-</html>
+              for(var i = 0;i<1 && participants.lenght > 0;i++){
+                addMessage('going to disable: ' + participant.id + '. name: ' + participant.person.displayName);
+                var participant = participants[0];
+                gapi.hangout.onair.setParticipantInBroadcast(participant.id, false);
+              }
+            }, 1000);
+          }, 3000);
+
+          addMessage('setted timeout');
+        });
+
+        function addMessage(msg){
+          var node = document.getElementById("messages");
+          node.innerHTML += msg + "<br />"
+        }
+      </script>
+    <body>
+    </html>
 
     ]]>
   </Content>
