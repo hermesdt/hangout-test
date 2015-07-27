@@ -8,7 +8,7 @@
     <![CDATA[
     <html>
     <body>
-    <p>hey!</p>
+    <p>hey you!</p>
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
       <!-- Código de la aplicación -->
 <script>
