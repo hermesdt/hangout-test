@@ -21,9 +21,7 @@ document.getElementById("phrase").innerHTML = 'hahahaha!';
 
 
   gapi.hangout.onParticipantsAdded.add(function(participants){
-    for(var i = 0;i<participants;i++){
-      console.log(participants[i]);
-    }
+      console.log(participants);
   });
 });
 </script>
