@@ -11,6 +11,7 @@
     <p>hey you!</p>
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
       <!-- Código de la aplicación -->
+
 <script>
   gapi.hangout.onApiReady.add(function(eventObj){
   if (eventObj.isApiReady) {
