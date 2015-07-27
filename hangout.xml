@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Your App Name">
+    <Require feature="rpc"/>
+    <Require feature="views"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
+      <!-- Código de la aplicación -->
+
+gapi.hangout.onApiReady.add(function(eventObj){
+  if (eventObj.isApiReady) {
+    console.log('ready');
+  }
+});
+
+    ]]>
+  </Content>
+</Module>
