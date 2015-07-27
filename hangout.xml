@@ -8,7 +8,7 @@
     <![CDATA[
     <html>
     <body>
-    <p>hey you!</p>
+    <p id="phrase">hey you!</p>
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
       <!-- Código de la aplicación -->
 
@@ -17,6 +17,8 @@
   if (eventObj.isApiReady) {
     console.log('ready');
   }
+document.getElementById("phrase").innerHTML = 'hahahaha!';
+
 
   gapi.hangout.onParticipantsAdded.add(function(participants){
     for(var i = 0;i<participants;i++){
