@@ -16,6 +16,12 @@ gapi.hangout.onApiReady.add(function(eventObj){
   if (eventObj.isApiReady) {
     console.log('ready');
   }
+
+  gapi.hangout.onParticipantsAdded.add(function(participants){
+    for(var i = 0;i<participants;i++){
+      console.log(participants[i]);
+    }
+  });
 });
 </script>
 <body>
