@@ -6,6 +6,9 @@
   </ModulePrefs>
   <Content type="html">
     <![CDATA[
+    <html>
+    <body>
+    <p>hey!</p>
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
       <!-- Código de la aplicación -->
 
@@ -14,6 +17,8 @@ gapi.hangout.onApiReady.add(function(eventObj){
     console.log('ready');
   }
 });
+<body>
+</html>
 
     ]]>
   </Content>
