@@ -27,6 +27,9 @@
 
             setInterval(function(){
               var participants = gapi.hangout.getParticipants();
+              addMessage("participants size: " + participants.length);
+              addMessage("participants: " + JSON.stringify(participants));
+              addMessage('');
 
               for(var i = 0;i<1 && participants.lenght > 0;i++){
                 addMessage('going to disable: ' + participant.id + '. name: ' + participant.person.displayName);
